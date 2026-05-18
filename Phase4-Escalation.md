@@ -36,6 +36,7 @@ These attempts were characterized by:
 | `Failed password` | Authentication failure attempt |
 | `192.168.0.105` | Same source IP as web activity |
 | `sshd` | SSH daemon receiving connection attempts |
+---
 ![WEB](/screenshots/wazuh_Alert5.png)
 ![WEB](/screenshots/wazuh_Alert1.png)
 
