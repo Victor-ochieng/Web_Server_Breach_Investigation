@@ -30,10 +30,10 @@ The following type of HTTP requests were observed in the Nginx access logs:
 
 ```text id="log1"
 GET /uploads/payload.php?cmd=whoami HTTP/1.1
-GET /uploads/payload.php?cmd=uname+-a HTTP/1.1
-GET /uploads/payload.php?cmd=id HTTP/1.1
+GET /uploads/payload.php?cmd=uname HTTP/1.1
+GET /uploads/payload.php?cmd=/var/www/html HTTP/1.1
 ```
-![Command Execution Log Analysis](screenshots/.png)
+![Command Execution Log Analysis](screenshots/LOGS.png)
 
 ---
 
@@ -102,7 +102,8 @@ The following indicators were flagged during analysis:
 - System command keywords (`whoami`, `id`, `uname`)
 - Use of command-line tool user-agent (`curl`)
 - Direct access to uploaded script path
-![Command Execution Log Analysis](screenshots/.png)
+---
+![Command Execution Log Analysis](screenshots/LOGS.png)
 
 ---
 
@@ -127,7 +128,9 @@ HTTP Request → Nginx Access Log → PHP Handler → System Interaction Attempt
 
 # Evidence
 
-![Command Execution Log Analysis](screenshots/.png)
+![Command Execution Log Analysis](screenshots/PAYLOAD.png)
+![Command Execution Log Analysis](screenshots/ACCESS.png)
+![Command Execution Log Analysis](screenshots/access.png)
 
 ---
 
