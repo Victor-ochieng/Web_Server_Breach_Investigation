@@ -19,7 +19,7 @@ The attacker interacted with the public-facing upload functionality exposed by t
 Instead of uploading an expected benign asset, a specially crafted server-side script was submitted through the application interface.
 
 Due to missing upload validation controls, the backend application accepted the file and wrote it directly into the web-accessible uploads directory.
-![WEB](screenshots/.png)
+![WEB](screenshots/webUI.png)
 
 ---
 
@@ -46,6 +46,6 @@ The uploaded file was written into the following monitored directory:
 ```
 
 Because this directory was actively monitored by the Wazuh File Integrity Monitoring (FIM) engine, the file creation event generated immediate forensic telemetry.
-![WEB](screenshots/.png)
+![WEB](screenshots/file_integrity.png)
 
 ---
