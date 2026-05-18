@@ -32,8 +32,11 @@ The following type of HTTP requests were observed in the Nginx access logs:
 GET /uploads/payload.php?cmd=whoami HTTP/1.1
 GET /uploads/payload.php?cmd=uname HTTP/1.1
 GET /uploads/payload.php?cmd=/var/www/html HTTP/1.1
+GET /uploads/payload.php HTTP/1.1
 ```
+![Command Execution Log Analysis](screenshots/webLogs.png)
 ![Command Execution Log Analysis](screenshots/LOGS.png)
+![Command Execution Log Analysis](screenshots/wazuh_Alert1.png)
 
 ---
 
@@ -71,7 +74,7 @@ Nginx access logs captured full request metadata including:
 
 # Attack Correlation Analysis
 
-This activity correlates directly with the previously observed file creation event in Phase 2.
+This activity correlates directly with the previously observed file creation event.
 
 ### Timeline Linkage:
 - Phase 2: Unauthorized file written to `/uploads/`
@@ -90,7 +93,9 @@ Wazuh analysis engine correlates this behavior using:
 - repeated parameter inspection
 - known sensitive command keywords
 - source IP consistency tracking
-![Command Execution Log Analysis](screenshots/.png)
+---
+![Command Execution Log Analysis](screenshots/wazuh_Alert3.png)
+![Command Execution Log Analysis](screenshots/wazuh_Alert4.png)
 
 ---
 
