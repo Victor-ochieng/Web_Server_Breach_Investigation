@@ -33,7 +33,8 @@ The following security weaknesses enabled successful exploitation:
 | No MIME-type verification | Executable content accepted |
 | Web-accessible upload directory | Uploaded content became remotely reachable |
 | Insufficient server-side filtering | Malicious payload bypassed controls |
-![WEB](screenshots/.png)
+---
+![WEB](screenshots/TESTING.png)
 
 ---
 
