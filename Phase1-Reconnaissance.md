@@ -50,7 +50,7 @@ Telemetry generated locally is forwarded to the Wazuh Manager for:
 - rule matching
 - incident visualization
 - forensic investigation
-![WEB](screenshot/webAgent.png)
+![WEB](screenshots/webAgent.png)
 
 ---
 
@@ -63,7 +63,7 @@ By default, the Wazuh Agent does not automatically ingest third-party applicatio
 ```bash
 sudo nano /var/ossec/etc/ossec.conf
 ```
-![WEB](screenshot/config1.png)
+![WEB](screenshots/ossec.png)
 
 
 The following monitoring blocks were added before the closing `</ossec_config>` tag.
@@ -75,7 +75,7 @@ The following monitoring blocks were added before the closing `</ossec_config>` 
 ```xml
 <directories realtime="yes" report_changes="yes">/var/www/html</directories>
 ```
-![WEB](screenshot/config1.png)
+![WEB](screenshots/config1.png)
 
 
 ### Purpose
@@ -141,7 +141,7 @@ Detects:
 - authentication anomalies
 - privilege escalation activity
 
-![WEB](screenshot/config2.png)
+![WEB](screenshots/config2.png)
 
 ---
 
@@ -149,7 +149,7 @@ Detects:
 
 After modifying the agent configuration, the Wazuh service was restarted to activate the telemetry pipeline.
 
-![WEB](screenshot/webAgent.png)
+![WEB](screenshots/webAgent.png)
 
 ---
 
@@ -172,6 +172,6 @@ This custom-built implementation enabled direct visibility into how attacker int
 
 By developing the PHP and HTML components manually rather than relying on prebuilt vulnerable applications, the laboratory environment remained lightweight, transparent, and fully controllable for DFIR-focused experimentation and detection engineering exercises.
 
-![WEB](screenshot/html.png)
-![WEB](screenshot/php.png)
+![WEB](screenshots/html.png)
+![WEB](screenshots/php.png)
 
